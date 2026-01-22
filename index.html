@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MikoYuki AI - 访问提示</title>
+    <style>
+        :root {
+            --bg-pink: #fff0f6;       /* 极浅粉背景 */
+            --main-pink: #ff85c0;     /* 主色调粉色 */
+            --border-pink: #ffadd2;   /* 边框粉色 */
+            --text-dark: #4d4d4d;     /* 深灰色文字 */
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-pink);
+            font-family: 'Hiragino Sans GB', "Microsoft YaHei", sans-serif;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .main-card {
+            background: var(--white);
+            width: 90%;
+            max-width: 550px;
+            border: 3px solid var(--main-pink); /* 平面化核心：明显的边框 */
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+        }
+
+        /* 装饰性的小点缀 */
+        .main-card::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background-image: radial-gradient(var(--border-pink) 20%, transparent 20%);
+            background-size: 10px 10px;
+            opacity: 0.5;
+        }
+
+        h1 {
+            color: var(--main-pink);
+            font-size: 22px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: "🌸";
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .author-tag {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 25px;
+        }
+
+        .desc-text {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .reason-list {
+            background: var(--bg-pink);
+            border-radius: 16px;
+            padding: 15px;
+            border: 1px solid var(--border-pink);
+        }
+
+        .reason-item {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: var(--white);
+            border-radius: 8px;
+            font-size: 14px;
+            color: #f767a6;
+            border-left: 4px solid var(--main-pink);
+        }
+
+        .status-section {
+            margin-top: 30px;
+        }
+
+        .status-title {
+            font-weight: bold;
+            color: var(--main-pink);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .status-grid {
+            display: flex;
+            gap: 15px;
+        }
+
+        .status-tag {
+            background: var(--white);
+            border: 2px solid var(--border-pink);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--border-pink);
+            border-top: 1px solid var(--bg-pink);
+            padding-top: 20px;
+        }
+
+        strong { color: var(--main-pink); }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <h1>你似乎在尝试访问 MikoYuki AI？</h1>
+    <div class="author-tag">by: TSIMU(月城苺みるく大学) Technology Support</div>
+
+    <div class="desc-text">
+        如果你尝试访问<strong>“MikoYuki AI”</strong>主页却被跳转至此，你可能遇到了以下情况：
+    </div>
+
+    <div class="reason-list">
+        <div class="reason-item">你的浏览器版本过低</div>
+        <div class="reason-item">你的网络/代理出现问题导致DNS未及时更新</div>
+        <div class="reason-item">DNS配置错误 / DNS污染</div>
+        <div class="reason-item">网站正在维护中 / 升级</div>
+    </div>
+
+    <div class="status-section">
+        <span class="status-title">目前维护状态为：</span>
+        <div class="status-grid">
+            <div class="status-tag">主站：维护中</div>
+            <div class="status-tag">API：维护中</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025-now TSIMU(月城苺みるく大学) Technology - AI
+    </div>
+</div>
+
+</body>
+</html>
